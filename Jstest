@@ -1,0 +1,24 @@
+
+用JavaScript隐藏控件的方法有两种，分别是通过设置控件的style的“display”和“visibility”属性。
+当style.display="block"或style.visibility="visible"时控件或见，当style.display="none"或style.visibility="hidden"时控件不可见。不同的是“display”不但隐藏控件，而且被隐藏的控件不再占用显示时占用的位置，而“visibility”隐藏的控件仅仅是将控件设置成不可见了，控件仍然占俱原来的位置。
+function displayHideUI()
+{
+var ui =document.getElementById("bbs");
+ui.style.display="none";
+}
+function displayShowUI()
+{
+var ui =document.getElementById("bbs");
+ui.style.display="";//display为空的话会好使，为block会使后边的空间换行
+}
+function visibilityHideUI()
+{
+var ui =document.getElementById("bbs");
+ui.style.visibility="hidden";
+}
+function visibilityShowUI()
+{
+var ui =document.getElementById("bbs");
+ui.style.visibility="visible";
+}
+</script>
